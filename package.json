@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "cp dist/doc-mgt-ui/* /Users/matt/development/workspaces/flask_nginx_config/front_end/dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

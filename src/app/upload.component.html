@@ -1,0 +1,13 @@
+<h1>Upload New Document</h1>
+<div>
+
+    <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="file" name="docPayload" (change)="onFileSelect($event)" />
+      </div>
+      <div>
+        <button type="submit">Upload</button>
+      </div>
+    </form>
+
+</div>
