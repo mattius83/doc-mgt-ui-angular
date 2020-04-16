@@ -2,12 +2,49 @@
 <div>
 
     <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
-      <div>
-        <input type="file" name="docPayload" (change)="onFileSelect($event)" />
-      </div>
-      <div>
+
+        <div class="spingest">
+            <label>Title:</label>
+            <input type="text" name="title"  (change)="onTitleChange($event)"/>
+        </div>
+
+        <div class="spingest">
+            <label>Year:</label>
+            <input type="number" name="year" (change)="onYearChange($event)"/>
+        </div>
+
+        <div class="spingest">
+            <label>Category:</label>
+            <select id="doc-category" name="category" (change)="onCategoryChange($event)">
+                <option value="banking">Banking</option>
+                <option value="bill_payment">Bill Payment</option>
+                <option value="government">Government</option>
+                <option value="insurance">Insurance</option>
+                <option value="jemicy">Jemicy</option>
+                <option value="miscellaneous">Miscellaneous</option>
+                <option value="mortgage">Mortgage</option>
+                <option value="paystubs">Paystubs</option>
+                <option value="personal">Personal</option>
+                <option value="university_maryland">University of Maryland</option>
+                <option value="vehicles">Vehicles</option>
+
+            </select>
+        </div>
+
+        <div class="spingest">
+            <label>User Tags:</label>
+            <input type="text" name="tags" (change)="onTagsChange($event)"/>
+        </div>
+
+        <div class="spingest">
+            <label>Document:</label>
+            <input type="file" name="docPayload" (change)="onFileSelect($event)" />
+        </div>
+
+      <div class="spingest">
         <button type="submit">Upload</button>
       </div>
+
     </form>
 
 </div>
