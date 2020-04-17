@@ -59,6 +59,7 @@ export class UploadComponent implements OnInit {
         formData.append('title', this.uploadForm.get('title').value);
         formData.append('year',  this.uploadForm.get('year').value);
         formData.append('category', this.uploadForm.get('category').value);
+        formData.append('tags', this.uploadForm.get('tags').value);
         formData.append('file', this.uploadForm.get('docPayload').value);
 
         console.log("Here is the captured formData: ");
