@@ -1,12 +1,40 @@
+<h1>Search for documents</h1>
+<div>
+    <form [formGroup] = "searchForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-field">
+            <label>Search Term(s):</label>
+            <input type="text" name="terms"  (change)="onTermsChange($event)"/>
+        </div>
+
+
+      <div class="form-field">
+        <button type="submit">Search</button>
+      </div>
+
+    </form>
+</div>
+
 
 <div>
   <br><br>
 
+  <!--
   <ag-grid-angular
-    style="width: 500px; height: 500px;"
+    style="width: 800px; height: 300px;"
     class="ag-theme-alpine"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
     >
   </ag-grid-angular>
+  -->
+
+    <h2>Results</h2>
+
+    <ul>
+        <li *ngFor="let entry of rowData">
+            <a href="{{  createUrl(entry.path) }}"> {{ entry.title }} </a>
+        </li>
+    </ul>
+
 </div>
